@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body,
+html {
+    background-image: url('../Image/imagem.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    overflow-x: hidden;
+    /* Oculta a barra de rolagem horizontal */
+    scroll-behavior: smooth;
+    /* Opcional para rolagem suave */
+    padding-top: 20px;
+    /* Ajusta o espaço superior */
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* Estilos para o formulário */
+form {
+    position: relative;
+    max-width: 500px;
+    /* Ajusta a largura máxima do formulário */
+    padding: 20px;
+    /* Espaçamento interno */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Cor de fundo do formulário */
+    border-radius: 20px;
+    /* Borda arredondada */
+    color: white;
+    margin-top: 20px;
+    /* Espaço superior para separar do topo */
+}

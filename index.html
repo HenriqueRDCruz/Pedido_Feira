@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>FORMULÁRIO DE CONTATO</title>
+
+    <script src="Js/import.js"></script>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <form action="http://formmail.kinghost.net/formmail.cgi" method="POST" id="formulario" novalidate>
+
+            <!-- Campos ocultos para o FormMail -->
+            <input type="hidden" name="recipient" value="sistemas2@wolfstore.com.br">
+            <input type="hidden" name="redirect" value="https://www.wolfstore.com.br/site/form_feira/index.html">
+            <input type="hidden" name="subject" value="FORMULÁRIO FEIRA">
+
+            <!-- Campos visíveis do formulário -->
+            <div class="form-group">
+                <label for="representante_de">De</label>
+                <select name="representante_de" id="representante_de" class="form-control" required>
+                    <option value="" disabled selected hidden>ESCOLHA UMA OPÇÃO</option>
+                    <option value="Gaspar">GASPAR</option>
+                    <option value="Leonardo">LEONARDO</option>
+                    <option value="Claudio">CLAUDIO</option>
+                    <option value="Marco">MARCO</option>
+                    <option value="Arthur">ARTHUR</option>
+                    <option value="Igor">IGOR</option>
+                </select>
+                <div class="invalid-feedback">POR FAVOR, ESCOLHA UMA OPÇÃO.</div>
+            </div>
+
+            <div class="form-group">
+                <label for="representante_para">PARA</label>
+                <select name="representante_para" id="representante_para" class="form-control" required
+                    onchange="updateRecipient()">
+                    <option value="" disabled selected hidden>ESCOLHA UMA OPÇÃO</option>
+                    <option value="Jaqueline">JAQUELINE</option>
+                    <option value="Rosana">ROSANA</option>
+                    <option value="Priscila">PRISCILA</option>
+                </select>
+                <div class="invalid-feedback">POR FAVOR, ESCOLHA UMA OPÇÃO.</div>
+            </div>
+
+            <div class="form-group">
+                <label for="cliente">CLIENTE</label>
+                <input type="text" id="cliente" name="cliente" class="form-control"
+                    placeholder="Digite o nome do cliente" required>
+                <div class="invalid-feedback">POR FAVOR, DIGITE O NOME DO CLIENTE.</div>
+            </div>
+
+            <!-- Botão para adicionar -->
+            <button type="button" class="btn btn-primary mb-3" onclick="insertHtml()">ADICIONAR CAMPOS...</button>
+
+            <!-- Div para listar produtos -->
+            <div id="produtos" class="mb-3"></div>
+
+            <!-- Div para o leitor de QR code -->
+            <div id="qr-reader" style="width: 100%; max-width: 500px;"></div>
+
+            <!-- Div para exibir alertas -->
+            <div id="alerta" class="alert alert-warning" style="display: none;"></div>
+
+            <br>
+
+            <!-- Botões de enviar e resetar -->
+            <div>
+                <button type="button" class="btn btn-success" onclick="checkForm()">Enviar</button>
+                <button type="button" class="btn btn-secondary" onclick="reloadPage()">RESETAR PÁGINA</button>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+
+</html>
