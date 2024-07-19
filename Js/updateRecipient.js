@@ -1,9 +1,9 @@
 function updateRecipient() {
     var para = document.getElementById("representante_para").value;
     var emailDestinatario = {
-        "Jaqueline": "sistemas@wolfstore.com.br",
-        "Rosana": "sistemas2@wolfstore.com.br",
-        "Priscila": "sac3@wolfstore.com.br"
+        "A1": "exemple@exemple.com.br", // ADICIONE O EMAIL DESTINATARIO
+        "A2": "exemple@exemple.com.br",
+        "A3": "exemple@exemple.com.br"
     }[para];
 
     document.querySelector('input[name="recipient"]').value = emailDestinatario;
