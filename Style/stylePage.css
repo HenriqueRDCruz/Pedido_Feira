@@ -1,48 +1,147 @@
+@import url("../Style/font_Poppins.css");
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-
-body,
-html {
-    background-image: url('../Image/imagem.avif');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-    overflow-x: hidden;
-    /* Oculta a barra de rolagem horizontal */
-    scroll-behavior: smooth;
-    /* Opcional para rolagem suave */
-    padding-top: 20px;
-    /* Ajusta o espaço superior */
-}
-
-/* Container principal */
-.container {
+body {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     min-height: 100vh;
-    flex-direction: column;
+    padding: 50px;
+    background: linear-gradient(135deg, #56d8e4 30%, #9f01ea 70%);
 }
 
-/* Estilos para o formulário */
+.container {
+    max-width: 800px;
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-10px);
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
+    background: -webkit-linear-gradient(right, #56d8e4, #9f01ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 form {
+    padding: 20px 0;
+}
+
+.input-group {
     position: relative;
-    max-width: 500px;
-    /* Ajusta a largura máxima do formulário */
-    padding: 20px;
-    /* Espaçamento interno */
-    background-color: rgba(0, 0, 0, 0.8);
-    /* Cor de fundo do formulário */
-    border-radius: 20px;
-    /* Borda arredondada */
-    color: white;
-    margin-top: 20px;
-    /* Espaço superior para separar do topo */
+    margin-bottom: 20px;
+}
+
+.input-group-prepend label {
+    display: inline-block;
+    min-width: 100px;
+    color: #333;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+
+
+.custom-select, .form-control {
+    width: 100%;            
+    height: 45px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f7f7f7;
+    transition: border-color 0.3s ease;
+}
+
+.custom-select:focus, .form-control:focus {
+    border-color: #56d8e4;
+    outline: none;
+    box-shadow: 0 0 8px rgba(86, 216, 228, 0.4);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    border: none;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(86, 216, 228, 0.4);
+}
+
+.btn-primary {
+    background: #56d8e4;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #47c2d1;
+    transform: translateY(-3px);
+}
+
+.btn-success {
+    background: #28a745;
+    color: #fff;
+}
+
+.btn-success:hover {
+    background: #218838;
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    background: #6c757d;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background: #5a6268;
+    transform: translateY(-3px);
+}
+
+.invalid-feedback {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}
+
+#produtos, #qr-reader {
+    margin-bottom: 20px;
+}
+
+
+@media (max-width: 700px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    button {
+        font-size: 14px;
+    }
 }

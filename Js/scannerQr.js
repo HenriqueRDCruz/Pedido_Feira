@@ -4,7 +4,9 @@ function onScanSuccess(decodedText, decodedResult) {
     console.log(`Scan result: ${decodedText}`, decodedResult);
 
     const lastProductDiv = document.querySelector('#produtos div.produto:last-child');
+
     const inputNome = lastProductDiv.querySelector('input[name^="produto_"]');
+
     if (inputNome) {
         inputNome.value = decodedText;
     } else {
@@ -34,6 +36,7 @@ function startScanner() {
         console.error(`Unable to start scanning, error: ${err}`);
     });
 }
+
 
 function stopScanner() {
     if (html5QrCode) {
