@@ -2,9 +2,9 @@ function updateRecipient() {
     var para = document.getElementById("representante_para").value;
 
     var emailDestinatario = {
-        "Jaqueline": "sac@wolfstore.com.br",
-        "Rosana": "sac2@wolfstore.com.br",
-        "Priscila": "sac3@wolfstore.com.br"
+        "Jaqueline": "exemple@exemple.com.br",  // Defina o email destinatario
+        "Rosana": "exemple@exemple.com.br",
+        "Priscila": "exemple@exemple.com.br"
     }[para];
 
     document.querySelector('input[name="recipient"]').value = emailDestinatario;
