@@ -19,9 +19,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-12">
-                    <form action="http://formmail.kinghost.net/formmail.cgi" method="post" id="formulario">
+                    <form id="formulario">
 
-                        <h1 class="h1" style="text-align: center;">Form Contato</h1>
+                        <h1 class="h1" style="text-align: center;">PEDIDOS FEIRA</h1>
 
                         <div class="form-group">
                             <input type="hidden" name="recipient" value="sistemas2@wolfstore.com.br" class="form-control">
@@ -46,18 +46,7 @@
                             </select>
                             <div class="invalid-feedback">POR FAVOR, ESCOLHA UMA OPÇÃO.</div>
                         </div>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <label class="input-group-text" for="representante_para">PARA:</label>
-                            </div>
-                            <select class="custom-select" id="representante_para" required>
-                                <option value disabled selected hidden>ESCOLHA UMA OPÇÃO</option>
-                                <option value="Jaqueline">JAQUELINE</option>
-                                <option value="Rosana">ROSANA</option>
-                                <option value="Priscila">PRISCILA</option>
-                            </select>
-                            <div class="invalid-feedback">POR FAVOR, ESCOLHA UMA OPÇÃO.</div>
-                        </div>
+                        
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <label class="input-group-text" for="cliente">CLIENTE:</label>
@@ -65,6 +54,15 @@
                             <input type="text" id="cliente" name="cliente" class="form-control"
                                 placeholder="DIGITE O NOME DO CLIENTE" required>
                             <div class="invalid-feedback">POR FAVOR, DIGITE O NOME DO CLIENTE.</div>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="cliente">OC:</label>
+                            </div>
+                            <input type="text" id="oc" name="oc" class="form-control"
+                                placeholder="DIGITE A OC" required>
+                            <div class="invalid-feedback">POR FAVOR, INFORME OC DO PEDIDO.</div>
                         </div>
 
                         <div class="form-group">

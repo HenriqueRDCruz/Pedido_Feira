@@ -6,5 +6,4 @@ document.write('<script src="Js/checkForm.js"></script>');
 document.write('<script src="Js/insertHtml.js"></script>');
 document.write('<script src="Js/removeInsert.js"></script>');
 document.write('<script src="Js/scannerQr.js"></script>');
-document.write('<script src="Js/updateRecipient.js"></script>');
 document.write('<script src="Js/reloadPage.js"></script>');

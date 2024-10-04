@@ -79,6 +79,7 @@ function insertHtml() {
                         <option value="MT">MT</option>
                         <option value="PAR">PAR</option>
                         <option value="PLACA">PLACA</option>
+                        <option value="UNIDADE">UNIDADE</option>
                     </select>
                     <div class="invalid-feedback">ESCOLHA UMA UNIDADE DE MEDIDA</div>
                 </div>
