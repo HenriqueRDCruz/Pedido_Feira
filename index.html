@@ -7,8 +7,7 @@
 
     <link rel="stylesheet" href="Style/stylePage.css">
     <link rel="stylesheet" href="Framework&Library/bootStrap_v4.0.0.min.css">
-
-    <script src="Js/import.js"></script>
+    <link rel="icon" href="Image/WOLFSTORE.ico" type="image/x-icon">
 
     <title>FORMULÁRIO DE CONTATO</title>
 </head>
@@ -23,19 +22,11 @@
 
                         <h1 class="h1" style="text-align: center;">PEDIDOS FEIRA</h1>
 
-                        <div class="form-group">
-                            <input type="hidden" name="recipient" value="sistemas2@wolfstore.com.br" class="form-control">
-
-                            <input type="hidden" name="redirect" value="https://www.wolfstore.com.br/site/form_feira/index.html">
-
-                            <input type="hidden" name="subject" value="FORMULÁRIO FEIRA">
-                        </div>
-
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <label class="input-group-text" for="representante_de">DE:</label>
+                                <label class="input-group-text" for="representante">DE:</label>
                             </div>
-                            <select class="custom-select" id="representante_de" required>
+                            <select class="custom-select" id="representante" name="representante" required>
                                 <option value disabled selected hidden>ESCOLHA UMA OPÇÃO</option>
                                 <option value="Gaspar">GASPAR</option>
                                 <option value="Leonardo">LEONARDO</option>
@@ -43,46 +34,42 @@
                                 <option value="Marco">MARCO</option>
                                 <option value="Arthur">ARTHUR</option>
                                 <option value="Igor">IGOR</option>
+                                <option value="Jonny">JONNY</option>
                             </select>
                             <div class="invalid-feedback">POR FAVOR, ESCOLHA UMA OPÇÃO.</div>
                         </div>
-                        
+
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <label class="input-group-text" for="cliente">CLIENTE:</label>
                             </div>
-                            <input type="text" id="cliente" name="cliente" class="form-control"
-                                placeholder="DIGITE O NOME DO CLIENTE" required>
+                                <input type="text" id="cliente" name="cliente" class="form-control" placeholder="INFORME CLIENTE" required>
                             <div class="invalid-feedback">POR FAVOR, DIGITE O NOME DO CLIENTE.</div>
                         </div>
 
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <label class="input-group-text" for="cliente">OC:</label>
+                                <label class="input-group-text" for="oc">OC:</label>
                             </div>
-                            <input type="text" id="oc" name="oc" class="form-control"
-                                placeholder="DIGITE A OC" required>
-                            <div class="invalid-feedback">POR FAVOR, INFORME OC DO PEDIDO.</div>
+                                <input type="text" id="oc" name="oc" class="form-control" placeholder="DIGITE OC" maxlength="40" required>
+                            <div class="invalid-feedback">POR FAVOR, DIGITE OC DO PEDIDO.</div>
                         </div>
 
                         <div class="form-group">
-                            <button type="button" class="btn btn-primary mb-3 form-control" id="originalButton"
-                                onclick="insertHtml()">ADICIONAR CAMPOS...</button>
+                            <button type="button" class="btn btn-primary mb-3 form-control" id="originalButton" onclick="insertHtml()">ADICIONAR CAMPOS...</button>
                         </div>
 
                         <div id="produtos" class="mb-3"></div>
 
-                        <div id="qr-reader" style="width: 150%; max-width: 350px; margin: 0 auto; "></div><br>
+                        <div id="qr-reader" style="width: 100%; max-width: 500px;"></div><br>
 
                         <div class="form-group">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-12 mb-2 mb-md-0">
-                                    <button type="button" class="btn btn-success form-control"
-                                        onclick="checkForm(this)">ENVIAR</button>
+                                    <button onclick="checkForm()" type="button" class="btn btn-success form-control">ENVIAR</button>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <button type="button" class="btn btn-secondary form-control"
-                                        onclick="reloadPage(this)">RESETAR</button>
+                                    <button type="button" class="btn btn-secondary form-control" onclick="reloadPage(this)">RESETAR</button>
                                 </div>
                             </div>
                         </div>
@@ -92,6 +79,8 @@
         </div>
     </section>
 
+    <script src="Js/import.js"></script>
+    
 </body>
 
 </html>

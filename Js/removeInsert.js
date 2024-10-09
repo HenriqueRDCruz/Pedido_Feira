@@ -5,7 +5,7 @@ function removeInsert(button) {
 
     const numProdutos = document.querySelectorAll('#produtos div.produto').length;
 
-    if (numProdutos === 0) {
+    if (numProdutos === 0){
         const originalButton = document.getElementById('originalButton');
         originalButton.style.display = 'inline-block';
     }
