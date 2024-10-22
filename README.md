@@ -16,6 +16,7 @@ A **Interface Web Simplificada** foi desenvolvida com o objetivo de substituir o
 
 ## Como Executar
 
-1. Clone o repositório para sua máquina local:
+1. Faça o download ou clone este repositório.
    ```bash
    git clone https://github.com/HenriqueRDCruz/Pedido_Feira.git
+2. Abra o arquivo `index.html` em qualquer navegador web.
