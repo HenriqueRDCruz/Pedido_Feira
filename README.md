@@ -1,6 +1,6 @@
 # Interface Web Simplificada
 
-A **Interface Web Simplificada** foi desenvolvida com o objetivo de substituir o uso do papel, esta solução fornece uma experiência intuitiva e eficiente para digitalizar pedidos.
+A **Interface Web Simplificada** desenvolvimento em andamento
 
 ## Linguagens e Frameworks
 
