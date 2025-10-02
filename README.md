@@ -1,7 +1,3 @@
-# Interface Web Simplificada
-
-A **Interface Web Simplificada** desenvolvimento em andamento
-
 ## Linguagens e Frameworks
 
 **HTML** - **CSS** - **JavaScript** - **Bootstrap** - **html5-qrcode** - **jQuery** - **jsPDF**
