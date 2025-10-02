@@ -127,10 +127,6 @@ button:focus {
     display: block;
 }
 
-#produtos, #qr-reader {
-    margin-bottom: 20px;
-}
-
 /* Responsividade */
 @media (max-width: 700px) {
     .container {

@@ -1,3 +1,3 @@
 function reloadPage() {
-    window.location.href = "exemple.com.br/...";
+    window.location.href = "https://www.wolfstore.com.br/site/form_feira/index.html";
 }

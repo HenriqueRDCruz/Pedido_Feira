@@ -1,12 +1,15 @@
-var html5QrCode;
+let html5QrCode;
 
 function onScanSuccess(decodedText, decodedResult) {
     console.log(`Scan result: ${decodedText}`, decodedResult);
 
+    // Localiza o último produto
     const lastProductDiv = document.querySelector('#produtos div.produto:last-child');
 
+    // Localiza o campo de produto dentro do último item
     const inputNome = lastProductDiv.querySelector('input[name^="produto_"]');
 
+    // Se o campo de produto existir, preenche com o texto do QR Code
     if (inputNome) {
         inputNome.value = decodedText;
     } else {
@@ -14,37 +17,41 @@ function onScanSuccess(decodedText, decodedResult) {
     }
 
     stopScanner();
+    startScanner();
 }
 
 function onScanFailure(error) {
     console.warn(`QR code scan error: ${error}`);
 }
 
+// Função para iniciar o scanner
 function startScanner() {
     if (!html5QrCode) {
-        html5QrCode = new Html5Qrcode("qr-reader");
+        html5QrCode = new Html5QrcodeScanner('reader', {
+            qrbox: {
+                width: 250,
+                height: 250
+            },
+            fps: 20, // Frames por segundo
+        });
     }
 
-    const config = { fps: 10, qrbox: 250, facingMode: { exact: "environment" } };
+    // Inicia o scanner
+    html5QrCode.render(onScanSuccess, onScanFailure);
 
-    html5QrCode.start(
-        { facingMode: "environment" },
-        config,
-        onScanSuccess,
-        onScanFailure
-    ).catch(err => {
-        console.error(`Unable to start scanning, error: ${err}`);
-    });
+
+    // Oculta o ícone de informações
+    const infoIcon = document.querySelector('.html5-qrcode-info-icon');
+    if (infoIcon) {
+        infoIcon.style.display = 'none';
+    }
 }
 
-
+// Função para parar o scanner
 function stopScanner() {
     if (html5QrCode) {
-        html5QrCode.stop().then(ignore => {
-            console.log("QR Code scanning stopped.");
-            html5QrCode.clear();
-        }).catch(err => {
-            console.error(`Unable to stop scanning, error: ${err}`);
-        });
+        html5QrCode.clear();
+        console.log("Scanner parado.");
+        document.getElementById('reader').innerHTML = ''; // Limpa o scanner da tela para reiniciar
     }
 }

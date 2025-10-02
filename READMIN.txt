@@ -1,0 +1,2 @@
+Interface Web Simplificada
+Desenvolvida com o objetivo de substituir o uso do papel, esta solução proporciona uma experiência intuitiva e eficiente para digitalizar pedidos. Construída com as linguagens HTML, CSS e JavaScript, a interface utiliza uma combinação de ferramentas: Bootstrap 4.0.0 para estilização e layout responsivo, html5-qrcode para leitura de QR codes, jQuery v3.2.1 para manipulação dinâmica de elementos e jsPDF 2.5.1 para geração de PDFs diretamente no navegador.
